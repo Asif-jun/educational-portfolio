@@ -1,4 +1,5 @@
 import './App.css'
+import { Footer } from './layout/footer/Footer'
 import { Header } from './layout/header/Header'
 import { Contact } from './layout/section/contacts/Contact'
 import { Main } from './layout/section/main/Main'
@@ -17,6 +18,7 @@ function App() {
 			<Testimony />
 			<Contact />
 			<Slogan />
+			<Footer />
 		</div>
 	)
 }
