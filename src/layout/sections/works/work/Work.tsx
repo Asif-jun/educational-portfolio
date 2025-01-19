@@ -19,8 +19,10 @@ export const Work = (props: WorkPropsType) => {
 			<Description>
 				<Title>{props.title}</Title>
 				<Text>{props.text}</Text>
-				<Link href={'#'}>demo</Link>
-				<Link href={'#'}>code</Link>
+				<LinkContainer>
+					<Link href={'#'}>demo</Link>
+					<Link href={'#'}>code</Link>
+				</LinkContainer>
 			</Description>
 		</StyledWork>
 	)
@@ -81,10 +83,15 @@ const Img = styled.img`
 
 const Description = styled.div`
 	padding: 25px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
 `
 
 const Title = styled.h3``
 
 const Text = styled.p`
 	margin: 14px 0 10px;
+	text-align: left;
 `
+const LinkContainer = styled.div``

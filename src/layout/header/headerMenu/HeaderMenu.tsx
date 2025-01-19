@@ -25,7 +25,7 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
 	)
 }
 
-const StyledHeaderMenu = styled.ul`
+const StyledHeaderMenu = styled.nav`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -33,6 +33,10 @@ const StyledHeaderMenu = styled.ul`
 		display: flex;
 		gap: 30px;
 		justify-content: center;
+	}
+
+	@media ${theme.media.tablet} {
+		display: none;
 	}
 `
 
@@ -50,7 +54,6 @@ const Mask = styled.span`
 	display: inline-block;
 	height: 50%;
 	overflow-y: hidden;
-	/* outline: 1px solid red; */
 	color: ${theme.colors.accent};
 
 	& + & {

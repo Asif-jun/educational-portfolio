@@ -7,4 +7,9 @@ export const theme = {
 		borderColor: '#4A4A4A',
 		placeholderColor: '#252527',
 	},
+
+	media: {
+		tablet: 'screen and (max-width: 768px)',
+		mobile: 'screen and (max-width: 576px)',
+	},
 }
