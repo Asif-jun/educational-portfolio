@@ -26,9 +26,6 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
 }
 
 const StyledHeaderMenu = styled.nav`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	ul {
 		display: flex;
 		gap: 30px;

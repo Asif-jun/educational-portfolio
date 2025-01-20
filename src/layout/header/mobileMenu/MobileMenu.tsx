@@ -7,7 +7,7 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
 			<BurgerButton isOpen={true}>
 				<span></span>
 			</BurgerButton>
-			<MobileMenuPopup isOpen={false}>
+			<MobileMenuPopup isOpen={true}>
 				<ul>
 					{props.menuItems.map((item, index) => {
 						return (
@@ -47,6 +47,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 	z-index: 99999;
 	background-color: rgba(31, 31, 32, 0.9);
 	display: none;
+
 	${props =>
 		props.isOpen &&
 		css<{ isOpen: boolean }>`
@@ -67,9 +68,9 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 	position: fixed;
 	top: -100px;
 	right: -100px;
-	widows: 200px;
+	width: 200px;
 	height: 200px;
-	z-index: 99999;
+	z-index: 9999999;
 
 	span {
 		display: block;
@@ -83,7 +84,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 		${props =>
 			props.isOpen &&
 			css<{ isOpen: boolean }>`
-				color: rgba(255, 255, 255, 0);
+				background-color: rgba(255, 255, 255, 0);
 			`}
 
 		&::before {
@@ -94,26 +95,28 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 			background-color: ${theme.colors.font};
 			position: absolute;
 			transform: translateY(-10px);
+
 			${props =>
 				props.isOpen &&
 				css<{ isOpen: boolean }>`
-					transform: rotate(-45deg) translateY(0);
-				`};
+					transform: rotate(-45deg) translateY(0px);
+				`}
 		}
 		&::after {
 			content: '';
 			display: block;
 			width: 24px;
 			height: 2px;
-			color: ${theme.colors.font};
+			background-color: ${theme.colors.font};
 			position: absolute;
 			transform: translateY(10px);
+
 			${props =>
 				props.isOpen &&
 				css<{ isOpen: boolean }>`
-					transform: rotate(45deg) translateY(0);
+					transform: rotate(45deg) translateY(0px);
 					width: 36px;
-				`};
+				`}
 		}
 	}
 `
