@@ -23,6 +23,10 @@ const StyledTabMenu = styled.nav`
 		display: flex;
 		gap: 20px;
 		justify-content: center;
+		max-width: 352px;
+		width: 100%;
+		border: 1px solid red;
+		margin: 0 auto 40px;
 	}
 `
 const ListItem = styled.li``
