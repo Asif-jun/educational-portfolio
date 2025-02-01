@@ -8016,6 +8016,11 @@ react-is@^18.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.3.1.tgz#e83557dc12eae63a99e003a46388b1dcbb44db7e"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
 
+react-parallax-tilt@^1.7.277:
+  version "1.7.277"
+  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.7.277.tgz#130e752d190119222f815487bead6c0c714105f6"
+  integrity sha512-ktKrhNpZyDEWJIYpC9f8zXyoN5mUKi/ra9f2RmNrfEiiXsM3ZS2kK6w5rgPBqpZJ6LHnRn9n2feNr08U9HkKxQ==
+
 react-refresh@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
