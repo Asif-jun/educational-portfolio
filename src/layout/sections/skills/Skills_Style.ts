@@ -4,6 +4,7 @@ import { theme } from '../../../styles/Theme'
 const Skills = styled.section`
 	background-color: #ffe5e4;
 	min-height: 100vh;
+	position: relative;
 `
 
 const Skill = styled.div`
