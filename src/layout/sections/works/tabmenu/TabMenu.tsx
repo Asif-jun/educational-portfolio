@@ -40,11 +40,9 @@ const StyledTabMenu = styled.nav`
 	margin-bottom: 40px;
 	ul {
 		display: flex;
-		gap: 20px;
 		justify-content: center;
 		max-width: 369px;
 		width: 100%;
-		border: 1px solid red;
 		margin: 0 auto 40px;
 	}
 `
