@@ -6,8 +6,6 @@ import React from 'react'
 import { MobileMenu } from './headerMenu/mobileMenu/MobileMenu'
 import { DesktopMenu } from './headerMenu/desktopMenu/DeskTopMenu'
 
-const items = ['Home', 'Skills', 'Works', 'Testimony', 'Contact']
-
 export const Header: React.FC = () => {
 	const [width, setWidth] = React.useState(window.innerWidth)
 	const breakpoint = 768
@@ -23,11 +21,7 @@ export const Header: React.FC = () => {
 			<FlexWrapper justify={'space-between'} align={'center'}>
 				<Container justify={'space-between'} display={'flex'}>
 					<Logo />
-					{width < breakpoint ? (
-						<MobileMenu menuItems={items} />
-					) : (
-						<DesktopMenu menuItems={items} />
-					)}
+					{width < breakpoint ? <MobileMenu /> : <DesktopMenu />}
 				</Container>
 			</FlexWrapper>
 		</S.Header>
