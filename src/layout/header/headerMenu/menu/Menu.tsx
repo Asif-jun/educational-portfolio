@@ -1,4 +1,5 @@
 import { S } from '../HeaderMenu_Styles'
+import { Link } from 'react-scroll'
 
 const items = [
 	{
@@ -30,6 +31,9 @@ export const Menu: React.FC = () => {
 				return (
 					<S.MenuItem key={index}>
 						<S.NavLink
+							onSetActive={(to: any) => {
+								console.log(to)
+							}}
 							activeClass='active'
 							to={item.href}
 							smooth={true}

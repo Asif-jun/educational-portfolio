@@ -3,6 +3,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper'
 import { theme } from '../../../styles/Theme'
 import { Link } from '../../../components/Link'
 import { Button } from '../../../components/Button'
+import { motion } from 'framer-motion'
 
 const Works = styled.section`
 	position: relative;
@@ -11,10 +12,10 @@ const Works = styled.section`
 	}
 `
 
-const Work = styled.div`
+const Work = styled(motion.div)`
 	background-color: ${theme.colors.secondaryBg};
-	width: 330px;
-	flex-grow: 1;
+	/* width: 330px;
+	flex-grow: 1; */
 
 	${Link} {
 		padding: 10px 0;
@@ -23,10 +24,10 @@ const Work = styled.div`
 			margin-left: 20px;
 		}
 	}
-
+/* 
 	@media ${theme.media.desktop} {
 		max-width: 540px;
-	}
+	} */
 `
 
 const ImageWrapper = styled.div`

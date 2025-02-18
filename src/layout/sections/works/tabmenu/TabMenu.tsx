@@ -44,6 +44,7 @@ const StyledTabMenu = styled.nav`
 		max-width: 369px;
 		width: 100%;
 		margin: 0 auto 40px;
+		gap: 5px;
 	}
 `
 const ListItem = styled.li``

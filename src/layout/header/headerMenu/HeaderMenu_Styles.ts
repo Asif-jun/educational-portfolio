@@ -3,7 +3,6 @@ import { theme } from '../../../styles/Theme'
 import { Link } from 'react-scroll'
 
 // Menu
-
 const MenuItem = styled.li`
 	position: relative;
 `
@@ -26,8 +25,8 @@ const Mask = styled.span`
 		}
 	}
 `
-//@ts-ignore
-const NavLink = styled(Link)`
+
+const NavLink = styled(Link as any)`
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 30px;
 	font-weight: 400;

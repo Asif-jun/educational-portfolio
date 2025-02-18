@@ -7,6 +7,8 @@ import timerImg from './../../../assets/img/timer.webp'
 import { Container } from '../../../components/Container'
 import { S } from './Works_Styles'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 
 const tabsItems: Array<{
 	status: TabsStatusType
@@ -36,12 +38,42 @@ const worksData = [
 		src: socialImg,
 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ',
 		type: 'spa',
+		id: 1,
 	},
 	{
 		title: 'Timer',
 		src: timerImg,
 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ',
 		type: 'react',
+		id: 2,
+	},
+	{
+		title: 'Social Network',
+		src: socialImg,
+		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ',
+		type: 'spa',
+		id: 3,
+	},
+	{
+		title: 'Timer',
+		src: timerImg,
+		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ',
+		type: 'react',
+		id: 4,
+	},
+	{
+		title: 'Social Network',
+		src: socialImg,
+		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ',
+		type: 'spa',
+		id: 5,
+	},
+	{
+		title: 'Timer',
+		src: timerImg,
+		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ',
+		type: 'react',
+		id: 6,
 	},
 ]
 
@@ -77,9 +109,22 @@ export const Works: React.FC = () => {
 					align={'flex-start'}
 					wrap={'wrap'}
 				>
-					{filteredWorks.map(w => {
-						return <Work title={w.title} src={w.src} text={w.text} />
-					})}
+					<AnimatePresence>
+						{filteredWorks.map(w => {
+							return (
+								<motion.div
+									style={{ width: '400px', flexGrow: '1', maxWidth: '540px' }}
+									layout
+									initial={{ opacity: 0, scale: 0.5 }}
+									animate={{ opacity: 1, scale: 1 }}
+									transition={{ duration: 0.5 }}
+									key={w.id}
+								>
+									<Work title={w.title} src={w.src} text={w.text} key={w.id} />
+								</motion.div>
+							)
+						})}
+					</AnimatePresence>
 				</FlexWrapper>
 			</Container>
 		</S.Works>
