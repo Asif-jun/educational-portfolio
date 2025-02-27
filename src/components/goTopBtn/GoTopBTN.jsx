@@ -28,7 +28,7 @@ export const GoTopBTN = () => {
 						iconId={'arrowGoTop'}
 						height={'15'}
 						width={'16'}
-						viewBox={'0 0 16 15'}
+						viewBox={'4 4 20 20'}
 					/>
 				</StyledGoTopBTN>
 			)}
